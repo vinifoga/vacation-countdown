@@ -42,7 +42,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   void initState() {
     super.initState();
-    var _everySecond = Timer.periodic(const Duration(seconds: 1), (Timer t) {
+    Timer.periodic(const Duration(seconds: 1), (Timer t) {
       setState(() {
         _currDate = DateTime.now();
         days = (_date.difference(_currDate)).inDays;
@@ -58,19 +58,22 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       backgroundColor: Colors.black,
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                DisplayComponent(variable: days.toString(), text: 'Dias',),
-                DisplayComponent(variable: hours.toString(), text: 'Horas',),
-                DisplayComponent(variable: minutes.toString(), text: 'Minutos',),
-                DisplayComponent(variable: seconds.toString(), text: 'Segundos',),
-              ],
-            ),
-          ],
+        child: FittedBox(
+          fit: BoxFit.fitWidth,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  DisplayComponent(variable: days.toString(), text: 'Dias',),
+                  DisplayComponent(variable: hours.toString(), text: 'Horas',),
+                  DisplayComponent(variable: minutes.toString(), text: 'Minutos',),
+                  DisplayComponent(variable: seconds.toString(), text: 'Segundos',),
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );
