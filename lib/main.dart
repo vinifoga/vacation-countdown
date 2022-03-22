@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:limas_vacation_back_countdown/components/display_component.dart';
 
 void main() {
@@ -13,12 +14,14 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Férias',
+      title: 'Retorno do Lima',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
-        backgroundColor: Colors.black,
+        brightness: Brightness.dark,
+        accentColor: Colors.white,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: const MyHomePage(title: 'Férias'),
+      darkTheme: ThemeData.dark(),
+      home: const MyHomePage(title: 'Retorno do Lima'),
     );
   }
 }
@@ -64,6 +67,17 @@ class _MyHomePageState extends State<MyHomePage> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Row(
+                children: [
+                  Text(
+                    'Faltam',
+                    style: GoogleFonts.robotoMono(
+                      color: Colors.white,
+                      fontSize: 35,
+                    ),
+                  ),
+                ],
+              ),
+              Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   DisplayComponent(variable: days.toString(), text: 'Dias',),
@@ -71,6 +85,16 @@ class _MyHomePageState extends State<MyHomePage> {
                   DisplayComponent(variable: minutes.toString(), text: 'Minutos',),
                   DisplayComponent(variable: seconds.toString(), text: 'Segundos',),
                 ],
+              ),
+              Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: Text(
+                  'Para o retorno do Lima',
+                  style: GoogleFonts.robotoMono(
+                    color: Colors.white,
+                    fontSize: 25,
+                  ),
+                ),
               ),
             ],
           ),
