@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="br.com.fogaca.limas_vacation_back_countdown">
+    package="br.com.fogaca.vacation_back_countdown">
    <application
-        android:label="limas_vacation_back_countdown"
+        android:label="vacation_back_countdown"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

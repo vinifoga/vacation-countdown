@@ -1,6 +1,6 @@
 {
-    "name": "limas_vacation_back_countdown",
-    "short_name": "limas_vacation_back_countdown",
+    "name": "vacation_back_countdown",
+    "short_name": "vacation_back_countdown",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

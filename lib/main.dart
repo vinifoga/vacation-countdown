@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:limas_vacation_back_countdown/components/display_component.dart';
+import 'package:vacation_back_countdown/components/display_component.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,14 +14,14 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Férias da Lays',
+      title: 'Férias da Tavinho',
       theme: ThemeData(
         brightness: Brightness.dark,
         accentColor: Colors.white,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       darkTheme: ThemeData.dark(),
-      home: const MyHomePage(title: 'Férias Lays'),
+      home: const MyHomePage(title: 'Férias Tavinho'),
     );
   }
 }
@@ -34,7 +34,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  final _date = DateTime(2022, 12, 30, 18, 0, 0, 0, 0);
+  final _date = DateTime(2022, 12, 03, 12, 0, 0, 0, 0);
   var _currDate = DateTime.now();
   int days = 0;
   int hours = 0;
@@ -89,7 +89,7 @@ class _MyHomePageState extends State<MyHomePage> {
               Padding(
                 padding: const EdgeInsets.all(16.0),
                 child: Text(
-                  'Para as férias da Lays',
+                  'Para as férias do Tavinho',
                   style: GoogleFonts.robotoMono(
                     color: Colors.white,
                     fontSize: 25,
