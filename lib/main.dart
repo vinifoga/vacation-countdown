@@ -14,14 +14,14 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Saída do Lima ',
+      title: 'Férias da Lays',
       theme: ThemeData(
         brightness: Brightness.dark,
         accentColor: Colors.white,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       darkTheme: ThemeData.dark(),
-      home: const MyHomePage(title: 'Saída do Lima'),
+      home: const MyHomePage(title: 'Férias Lays'),
     );
   }
 }
@@ -34,7 +34,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  final _date = DateTime(2022, 6, 17, 18, 0, 0, 0, 0);
+  final _date = DateTime(2022, 12, 30, 18, 0, 0, 0, 0);
   var _currDate = DateTime.now();
   int days = 0;
   int hours = 0;
@@ -89,7 +89,7 @@ class _MyHomePageState extends State<MyHomePage> {
               Padding(
                 padding: const EdgeInsets.all(16.0),
                 child: Text(
-                  'Para o saída do Lima',
+                  'Para as férias da Lays',
                   style: GoogleFonts.robotoMono(
                     color: Colors.white,
                     fontSize: 25,
